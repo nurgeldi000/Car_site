@@ -1,8 +1,5 @@
 from category import Category
 from django.db import models
-
-
-
 class Marka(models.Model):
     marka_name = models.CharField(max_length=100)
 

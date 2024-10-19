@@ -3,8 +3,8 @@ from .views import *
 
 urlpatterns = [
 
-    path('', MarkaListViewSet.as_view({'get': 'list', 'post': 'create'}), name='marka_list'),
-    path('<int:pk>/', MarkaDetailViewSet.as_view({'get': 'retrieve', 'put': 'update',
+    path('', MarkaViewSet.as_view({'get': 'list', 'post': 'create'}), name='marka_list'),
+    path('<int:pk>/', MarkaViewSet.as_view({'get': 'retrieve', 'put': 'update',
                                               'delete': 'destroy'}), name='marka_detail'),
 
     path('users/', CarModelViewSet.as_view({'get': 'list', 'post': 'create'}), name='car-model_list'),

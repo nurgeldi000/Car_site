@@ -1,27 +1,22 @@
 from rest_framework import viewsets
 from .serializers import *
 
-
 class MarkaViewSet(viewsets.ModelViewSet):
-    queryset = Marka.object.all()
-    serializers = MarkaSerializer
-
+    queryset = Marka.objects.all()
+    serializer_class = MarkaSerializer
 
 class CarModelViewSet(viewsets.ModelViewSet):
-    queryset = CarModel.object.all()
-    serializers = CarModelSerializer
-
+    queryset = CarModel.objects.all()
+    serializer_class = CarModelSerializer
 
 class CarViewSet(viewsets.ModelViewSet):
-    queryset = Car.object.all()
-    serializers = CarSerializer
-
+    queryset = Car.objects.all()
+    serializer_class = CarSerializer
 
 class CarPhotosViewSet(viewsets.ModelViewSet):
-    queryset = CarPhotos.object.all()
-    serializers = CarPhotosSerializer
-
+    queryset = CarPhotos.objects.all()
+    serializer_class = CarPhotosSerializer
 
 class RatingViewSet(viewsets.ModelViewSet):
-    queryset = Rating.object.all()
-    serializers = RatingSerializer
+    queryset = Rating.objects.all()
+    serializer_class = RatingSerializer
